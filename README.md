@@ -1,4 +1,4 @@
-# Currency Converter Network Project
+# Currency Converter Web Project
 
 A distributed system for currency conversion with real-time rate updates, demonstrating TCP/HTTP and UDP network communications.
 
