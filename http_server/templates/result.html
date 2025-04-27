@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversion Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .result-container {
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .home-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        .home-button:hover {
+            background-color: #45a049;
+        }
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-container">
+        {% if result %}
+            <h2>Conversion Result</h2>
+            <p><strong>From:</strong> {{ result.base_currency }}</p>
+            <p><strong>To:</strong> {{ result.target_currency }}</p>
+            <p><strong>Date:</strong> {{ result.date }}</p>
+            <p><strong>Rate:</strong> {{ result.rate }}</p>
+        {% endif %}
+        {% if error %}
+            <h2 class="error">Error</h2>
+            <p class="error">{{ error }}</p>
+        {% endif %}
+        <a href="/" class="home-button">Back to Converter</a>
+    </div>
+</body>
+</html> 
